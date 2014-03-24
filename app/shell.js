@@ -8,7 +8,7 @@
         return true;
     };
     
-    var selectedNavRoutes = ko.computed(function () {
+    var selectedNavRoutes = knockout.computed(function () {
         return router.routes.filter(function (r) {
             return r.nav;
             });
