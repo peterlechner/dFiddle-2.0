@@ -31,7 +31,6 @@
             ]).buildNavigationModel();
 
             return router.activate();
-        },
-        selectedNavRoutes : selectedNavRoutes
+        }
     };
 });
