@@ -7,12 +7,12 @@
         }
         return true;
     };
-    /*
+    
     var selectedNavRoutes = ko.computed(function () {
-        return ko.utils.arrayFilter(router.buildNavigationModel(), function (r) {
+        return ko.utils.arrayFilter(router.routes, function (r) {
             return r.nav;
             });
-        });*/
+        });
 
     return {
         router: router,
@@ -31,6 +31,7 @@
             ]).buildNavigationModel();
 
             return router.activate();
-        }
+        },
+        selectedNavRoutes: selectedNavRoutes
     };
 });
