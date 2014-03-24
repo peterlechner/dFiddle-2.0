@@ -9,7 +9,7 @@
     };
     
     var selectedNavRoutes = ko.computed(function () {
-        return ko.utils.arrayFilter(router.routes, function (r) {
+        return router.routes.filter(function (r) {
             return r.nav;
             });
         });
