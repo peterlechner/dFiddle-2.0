@@ -23,7 +23,7 @@
     
     <div class="container-fluid">This doesn't work:</div>
     <div>
-        <ul data-bind="foreach: selectedNavRoutes">
+        <ul data-bind="foreach: selectedNavRoutes1">
             <li>
                 <a data-bind="attr: { href: hash }, css: { active: true }, html: title"></a>
             </li>
@@ -31,6 +31,15 @@
     </div>
     
     <div>This works:</div>
+    <div>
+        <ul data-bind="foreach: selectedNavRoutes2">
+            <li>
+                <a data-bind="attr: { href: hash }, css: { active: true }, html: title"></a>
+            </li>
+        </ul>
+    </div>
+    
+    <div>This also works:</div>
     <div>
         <ul data-bind="foreach: router.routes.filter(function(r) { return r.nav; })">
             <li>
