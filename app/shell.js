@@ -1,4 +1,4 @@
-﻿define(['plugins/router'], function (router) {
+﻿define(['plugins/router','knockout'], function (router,ko) {
 
     // Redirecting from / to first route
     router.guardRoute = function(routeInfo, params, instance){
