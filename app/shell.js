@@ -8,10 +8,14 @@
         return true;
     };
     
-    var selectedNavRoutes = ko.computed(function () {
+    var selectedNavRoutes1 = ko.computed(function () {
         return router.routes.filter(function (r) {
             return r.nav;
             });
+        });
+        
+    var selectedNavRoutes2 = ko.computed(function () {
+        return router.routes;
         });
 
     return {
@@ -32,6 +36,7 @@
 
             return router.activate();
         },
-        selectedNavRoutes: selectedNavRoutes
+        selectedNavRoutes1: selectedNavRoutes1,
+        selectedNavRoutes2: selectedNavRoutes2,
     };
 });
