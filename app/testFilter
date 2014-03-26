@@ -1,0 +1,9 @@
+<div class="container-fluid">This doesn't work:</div>
+    <div>
+        <ul data-bind="foreach: selectedNavRoutes1">
+            <li>
+                <a data-bind="attr: { href: hash }, css: { active: true }, html: title"></a>
+            </li>
+        </ul>
+    </div>
+</div>
