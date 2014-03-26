@@ -1,8 +1,14 @@
-﻿define(['durandal/app', 'durandal/system', 'knockout'], function( app, system, ko ) {
+﻿define(['plugins/router','durandal/app', 'durandal/system', 'knockout'], function(router, app, system, ko ) {
     var name = ko.observable();
     var canSayHello = ko.computed(function() {
         return name() ? true : false;
     });
+    
+    var selectedNavRoutes1 = ko.computed(function () {
+        return router.routes.filter(function (r) {
+            return r.nav;
+            });
+        });
 
     return {
         displayName: 'What is your name?',
@@ -29,6 +35,7 @@
         },
         detached: function( view ) {
             system.log('Lifecycle : detached : hello');
-        }
+        },
+        selectedNavRoutes1: selectedNavRoutes1
     };
 });
