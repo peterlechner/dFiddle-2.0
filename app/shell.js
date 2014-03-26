@@ -22,7 +22,7 @@
         router: router,
         activate: function () {
             router.map([
-                { route: '', moduleId: 'hello/index', title: 'Hello World' },
+                { route: '', moduleId: 'hello/index', title: 'Hello World', nav: true },
                 { route: 'hello*details', hash: '#hello', moduleId: 'hello/index', title: 'Hello World', nav: 1 },
                 { route: 'view-composition*details', hash:'#view-composition', moduleId: 'viewComposition/index', title: 'View Composition', nav: true },
                 { route: 'modal*details', hash: '#modal', moduleId: 'modal/index', title: 'Modal Dialogs', nav: 3 },
